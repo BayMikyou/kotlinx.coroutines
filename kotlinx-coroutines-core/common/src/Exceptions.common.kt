@@ -20,6 +20,6 @@ internal expect class JobCancellationException(
     internal val job: Job
 }
 
-internal expect class DispatchException(message: String, cause: Throwable) : RuntimeException
+internal expect class CoroutinesInternalError(message: String, cause: Throwable) : Error
 
 internal expect fun Throwable.addSuppressedThrowable(other: Throwable)
